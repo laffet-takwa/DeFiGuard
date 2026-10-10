@@ -12,6 +12,17 @@ foundry.zip
 release.json
 foundryup.ps1
 
+# ==================== Frontend ====================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# ==================== Environment ====================
+.env
+.env.*
+!.env.example
+!.frontend/.env.example
+
 # ==================== IDE ====================
 .vscode/
 .idea/
@@ -23,7 +34,3 @@ Thumbs.db
 
 # ==================== Logs ====================
 *.log
-cache/
-out/
-broadcast/
-.env
