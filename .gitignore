@@ -1,0 +1,29 @@
+# ==================== Foundry build artifacts ====================
+cache/
+out/
+broadcast/
+
+# ==================== Dependencies ====================
+# Restore with: forge install OpenZeppelin/openzeppelin-contracts foundry-rs/forge-std
+lib/
+
+# ==================== Foundryup / toolchain artifacts ====================
+foundry.zip
+release.json
+foundryup.ps1
+
+# ==================== IDE ====================
+.vscode/
+.idea/
+*.swp
+
+# ==================== OS ====================
+.DS_Store
+Thumbs.db
+
+# ==================== Logs ====================
+*.log
+cache/
+out/
+broadcast/
+.env
