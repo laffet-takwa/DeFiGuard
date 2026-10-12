@@ -371,16 +371,27 @@ npm run preview      # preview production build locally
 
 ## Screenshots
 
-| Pool Overview | Position & Health Gauge |
-| --- | --- |
-| *(screenshot: `docs/screenshots/pool-overview.jpg`)* | *(screenshot: `docs/screenshots/position-health.jpg`)* |
+### Initial State (No Wallet Connected)
 
-| Action Panel (Deposit) | Test Faucet & Event Log |
-| --- | --- |
-| *(screenshot: `docs/screenshots/action-panel.jpg`)* | *(screenshot: `docs/screenshots/faucet-events.jpg`)* |
+![Initial state — connect wallet prompt](docs/screenshots/01-initial-no-wallet.jpg)
 
-> Screenshots are not included in this repo. Run the project locally (`npm run dev`
-> in `frontend/`) and capture your own using the key UI states above.
+### Pool Overview & Position Dashboard (Wallet Connected)
+
+![Pool overview, position, and health gauge with wallet connected](docs/screenshots/02-wallet-connected-pool.jpg)
+
+### Action Panel — All Tabs
+
+| Deposit | Withdraw |
+| --- | --- |
+| ![Action panel: Deposit tab](docs/screenshots/06-action-deposit.jpg) | ![Action panel: Withdraw tab](docs/screenshots/03-action-withdraw.jpg) |
+
+| Borrow | Repay |
+| --- | --- |
+| ![Action panel: Borrow tab](docs/screenshots/04-action-borrow.jpg) | ![Action panel: Repay tab](docs/screenshots/05-action-repay.jpg) |
+
+### Test Faucet & Activity Feed (Full Page)
+
+![Test faucet and recent activity event log](docs/screenshots/07-test-faucet-events.jpg)
 
 ---
 
