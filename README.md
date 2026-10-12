@@ -12,6 +12,8 @@ Solidity 0.8.24, Foundry, OpenZeppelin, and a React + Vite dashboard.
 ## Table of Contents
 
 - [Architecture](#architecture)
+  - [Dependencies](#dependencies)
+  - [Theme & Design System](#theme--design-system)
 - [Risk Parameters & Invariants](#risk-parameters--invariants)
 - [Smart-Contract API](#smart-contract-api)
 - [Frontend](#frontend)
@@ -20,6 +22,8 @@ Solidity 0.8.24, Foundry, OpenZeppelin, and a React + Vite dashboard.
 - [Testing](#testing)
 - [Frontend Usage](#frontend-usage)
 - [Configuration Reference](#configuration-reference)
+- [Screenshots](#screenshots)
+- [Disclaimer](#disclaimer)
 
 ---
 
@@ -43,6 +47,38 @@ Solidity 0.8.24, Foundry, OpenZeppelin, and a React + Vite dashboard.
 | React | 18 | UI framework |
 | ethers.js | v6 | Blockchain interaction |
 | Vite | 5 | Bundler / dev server |
+
+### Theme & Design System
+
+The frontend uses a custom dark theme defined in `frontend/src/styles.css`, built on
+CSS custom properties (`:root`). The palette is DeFi-oriented: deep navy backgrounds
+with blue accent, green/yellow/orange/red status indicators.
+
+| Token | CSS Variable | Value | Purpose |
+| --- | --- | --- | --- |
+| Background | `--bg` | `#0b0e14` | Page background |
+| Card | `--bg-card` | `#131722` | Card / surface background |
+| Input | `--bg-input` | `#0d1117` | Input fields |
+| Border | `--border` | `#232a3a` | Card/input borders |
+| Text | `--text` | `#e8ecf4` | Primary text |
+| Text muted | `--text-muted` | `#8b94a7` | Secondary text |
+| Accent | `--accent` | `#4f7cff` | Blue primary actions |
+| Accent hover | `--accent-hover` | `#3d68e0` | Hover state |
+| Green | `--green` | `#22c55e` | Success / healthy / deposit |
+| Yellow | `--yellow` | `#eab308` | Warning / watch out |
+| Orange | `--orange` | `#f97316` | Danger / at-risk / withdraw |
+| Red | `--red` | `#ef4444` | Liquidated / error / paused |
+| Radius | `--radius` | `14px` | Border radius |
+
+**Health factor gauge status colors:**
+- `≥ 2.0` → **safe** (green)
+- `≥ 1.2` → **warning** (yellow)
+- `≥ 1.0` → **danger** (orange)
+- `< 1.0` → **liquidated** (red)
+- No debt → **nodebt** (green, ∞)
+
+**Event log color coding:**
+- Deposit → green, Withdraw → orange, Borrow → blue, Repay → purple, Pool events → muted
 
 ---
 
@@ -330,6 +366,21 @@ npm run preview      # preview production build locally
 
 - Dev server on port **5173**, `host: true` (accessible on LAN)
 - React plugin with fast refresh
+
+---
+
+## Screenshots
+
+| Pool Overview | Position & Health Gauge |
+| --- | --- |
+| *(screenshot: `docs/screenshots/pool-overview.jpg`)* | *(screenshot: `docs/screenshots/position-health.jpg`)* |
+
+| Action Panel (Deposit) | Test Faucet & Event Log |
+| --- | --- |
+| *(screenshot: `docs/screenshots/action-panel.jpg`)* | *(screenshot: `docs/screenshots/faucet-events.jpg`)* |
+
+> Screenshots are not included in this repo. Run the project locally (`npm run dev`
+> in `frontend/`) and capture your own using the key UI states above.
 
 ---
 
